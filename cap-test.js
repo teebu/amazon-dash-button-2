@@ -64,8 +64,8 @@ c.on('packet', function(nbytes, trunc) {
 
 
 
-// Internet Layer Protocols ====================================================
-exports.ARP = function(b, offset) {
+// NOT TESTED, Internet Layer Protocols ====================================================
+decoders.ARP = function(b, offset) {
   offset || (offset = 0);
   var origoffset = offset, i;
   var ret = {
