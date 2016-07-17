@@ -1,0 +1,24 @@
+{
+  "name": "dashbutton2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cap-test.js",
+  "dependencies": {
+    "cap": "^0.1.1",
+    "node-dash-button": "git+https://github.com/teebu/node-dash-button-winpcap.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teebu/amazon-dash-button-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teebu/amazon-dash-button-2/issues"
+  },
+  "homepage": "https://github.com/teebu/amazon-dash-button-2#readme"
+}
