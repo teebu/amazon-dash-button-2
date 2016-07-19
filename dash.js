@@ -13,7 +13,7 @@ var client = new Twitter({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
-var dash = dash_button(["44:65:0d:b3:fb:e6"]); // get the mac address of dash buttons
+var dash = dash_button(["44:65:0d:b3:fb:e6", "44:65:0d:f0:ad:61"]); // get the mac address of dash buttons
 
 dash.on("detected", function (dash_id){
   // todo: do stuff here
@@ -23,8 +23,13 @@ dash.on("detected", function (dash_id){
   //open('https://www.youtube.com/watch?v=oHg5SJYRHA0');
 
   // load a url (my music players pause/play)
-  //doRequest('http://127.0.0.1:8888/pluginrpc/Obyekt%20666%20C2.0/do/pp') // pause/play
-  doRequest('http://127.0.0.1:8888/pluginrpc/Obyekt%20666%20C2.0/do/ne') // next song
+  if (dash_id == "44:65:0d:b3:fb:e6"){ // redbull
+    doRequest('http://127.0.0.1:8888/pluginrpc/Obyekt%20666%20C2.0/do/pp') // pause/play
+  }
+
+  if (dash_id == "44:65:0d:f0:ad:61"){ // fiji
+    doRequest('http://127.0.0.1:8888/pluginrpc/Obyekt%20666%20C2.0/do/ne') // next song
+  }
 
   // post tweet
   var tweet = 'Hello, it is ' + new Date()
